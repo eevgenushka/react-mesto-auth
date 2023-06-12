@@ -6,16 +6,16 @@ function Login(props) {
 
   function handleEmailChange(evt) {
     setEmail(evt.target.value);
-  }
+    }
 
   function handlePasswordChange(evt) {
     setPassword(evt.target.value);
-  }
+    }
 
   function handleSubmit(evt) {
     evt.preventDefault();
     props.onLogin(email, password);
-  }
+  } 
 
   return (
     <section className="login">
@@ -35,7 +35,7 @@ function Login(props) {
           placeholder="Пароль"
           onChange={handlePasswordChange}
           value={password}
-          required
+         required
         />
         <button className="login__button button" type="submit">
           {props.textSubmit}

@@ -15,10 +15,7 @@ function Main({ cards, onEditProfile, onAddPlace, onEditAvatar, onCardClick, onC
             type="button"
             aria-label="Редактировать аватар"
           >
-            <div
-              className="profile__avatar"
-              style={{ backgroundImage: `url(${currentUser.avatar})` }}
-            ></div>
+           <img src={currentUser.avatar} alt={currentUser.name} className="profile__avatar" />
           </button>
           <div className="profile__info">
             <div className="profile__info-container">

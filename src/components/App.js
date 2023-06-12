@@ -48,7 +48,8 @@ function App() {
   function onLogin(email, password) {
     auth
       .login(email, password)
-      .then(() => {
+      .then((res) => {
+        localStorage.setItem("jwt", res.token);
         setLoggedIn(true);
         setEmail(email);
         navigate('/', { replace: true });
@@ -125,6 +126,7 @@ function App() {
     setIsInfoTooltipPopupOpen(false);
     setSelectedCard(null);
   }
+  
   function handleCardLike(card) {
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
     api
@@ -202,7 +204,7 @@ function App() {
             element={
               <>
                 <Header text="Регистрация" link="/sign-up" />
-                <Login onLogin={onLogin} title="Вход" textSubmit="Войти" />
+                <Login onLogin={onLogin} title="Вход" textSubmit="Войти"/>
               </>
             }
           />
