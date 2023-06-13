@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
 function InfoTooltip(props) {
   return (
     <div className={`popup ${props.isOpen ? `popup_opened` : ""}`}>

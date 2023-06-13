@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
 import { useContext } from "react";
 import CurrentUserContext from "../contexts/CurrentUserContext";
 
@@ -15,11 +17,11 @@ function Card({ card, onCardClick, onCardDelete, onCardLike }) {
   }
   function handleDeleteClick() {
 		onCardDelete(card);
-	};
+	}
 
 	function handleLikeClick() {
 		onCardLike(card);
-	};
+	}
 
   return (
     <div id="elements-template">

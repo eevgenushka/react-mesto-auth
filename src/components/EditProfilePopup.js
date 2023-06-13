@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
 import { useState, useEffect, useContext } from "react";
 import CurrentUserContext from "../contexts/CurrentUserContext";
 
@@ -12,11 +14,11 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
 
 	function handleChangeName(e) {
 		setName(e.target.value)
-	};
+	}
 
 	function handleChangeDescription(e) {
 		setDescription(e.target.value)
-	};
+	}
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -24,7 +26,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
 			name,
 			about: description,
         });
-	};
+	}
 
       useEffect(() => {
 		setName(currentUser.name);
@@ -62,7 +64,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
           className="popup__input popup__input_type_job"
           placeholder="Укажите профессию"
           value={description || ''}
-		  onChange={handleChangeDescription}
+          onChange={handleChangeDescription}
           minLength={2}
           maxLength={200}
           required=""
@@ -72,5 +74,5 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
         </span>
       </PopupWithForm>
     );
-};
+}
 export default EditProfilePopup;

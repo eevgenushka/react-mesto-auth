@@ -1,6 +1,9 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
 import { useState, useEffect } from "react";
 
 import PopupWithForm from "./PopupWithForm";
+
 
 function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading }) {
 
@@ -9,11 +12,11 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading }) {
 
 	function handleChangeName(e) {
 		setName(e.target.value)
-	};
+	}
 
 	function handleChangeLink(e) {
 		setLink(e.target.value)
-	};
+	}
 
 	function handleSubmit(e) {
 		e.preventDefault();
@@ -22,7 +25,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading }) {
 			name,
 			link
 		});
-	};
+	}
 
 	useEffect(() => {
 		setName('');
@@ -68,6 +71,6 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading }) {
         </span>
       </PopupWithForm>
     );
-    };
+    }
 
     export default AddPlacePopup

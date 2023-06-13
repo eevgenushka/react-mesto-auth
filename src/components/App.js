@@ -42,9 +42,9 @@ function App() {
       })
       .catch((err) => console.log(err));
 
-    сheckTocken();
-  }, []);
-
+    сheckTocken(); 
+  }, []); //
+  
   function onLogin(email, password) {
     auth
       .login(email, password)

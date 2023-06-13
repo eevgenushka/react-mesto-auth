@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
 function PopupWithForm({ name, title, buttonText, isOpen, onClose, onSubmit, ...props }) {

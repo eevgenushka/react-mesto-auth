@@ -1,3 +1,6 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
 import { useRef, useEffect } from "react";
 
 import PopupWithForm from "./PopupWithForm";
@@ -16,7 +19,7 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar, isLoading }) {
 		onUpdateAvatar({
 			avatar: avatarRef.current.value,
 		});
-	};
+	}
 	return (
         <PopupWithForm
         name="edit-avatar"

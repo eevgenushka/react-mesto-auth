@@ -60,7 +60,7 @@
 
   changeLikeCardStatus(cardId, isLiked) {
 		return isLiked ? this.setLikeCard(cardId) : this.removeLikeCard(cardId)
-	};
+	}
 
   deleteCard(cardId) {
     return fetch(`${this._url}/cards/${cardId}`, {
